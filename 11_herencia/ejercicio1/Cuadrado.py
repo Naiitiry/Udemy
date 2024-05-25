@@ -10,4 +10,3 @@ class Cuadrado(FiguraGeometrica,Color):
     def calcular_area(self):
         return self.alto * self.ancho
     
-# Video 118
