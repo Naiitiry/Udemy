@@ -1,4 +1,7 @@
-class FiguraGeometrica2:
+#ABC = Abstract Base Class - Abstracción de Clase - Video 125
+#from abc import ABC,classmethod
+
+class FiguraGeometrica2():
     def __init__(self,alto,ancho):
         self._alto = alto
         self._ancho = ancho
@@ -20,6 +23,10 @@ class FiguraGeometrica2:
     @ancho.setter
     def ancho(self,ancho):
         self._ancho = ancho
+    
+    @classmethod
+    def calculr_area(self):
+        pass
 
     def __str__(self):
         return f'La figura tiene {self.alto} de alto x {self.ancho} de ancho'
