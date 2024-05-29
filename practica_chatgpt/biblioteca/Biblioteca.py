@@ -37,7 +37,8 @@ class Biblioteca:
             if u._id_usuario == id_usuario:
                 usuario = u
                 break
-        
+
+        # Busca el libro por id_libro
         for l in self._libros:
             if l._id_libro == id_libro:
                 libro = l
@@ -54,7 +55,6 @@ class Biblioteca:
     def devolver_libro(self,id_usuario,id_libro):
         usuario = None
         libro = None
-
         #Busca el usuario por id_usuario
         for u in self._usuarios:
             if u._id_usuario == id_usuario:
