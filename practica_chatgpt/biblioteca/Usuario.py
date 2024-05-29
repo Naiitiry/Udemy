@@ -29,4 +29,6 @@ class Usuario:
 
     def __str__(self):
         libros_prestados_str=', '.join([libro._titulo for libro in self._libros_prestados])
-        return f'ID Usuario: {self._id_usuario}, Nombre: {self._nombre}, Libros prestados: {self._libros_prestados}'
+        return f'ID Usuario: {self._id_usuario}, Nombre: {self._nombre}, Libros prestados: {libros_prestados_str}'
+if __name__ == "__main":
+    usuari1 = Usuario('Nicolas')
