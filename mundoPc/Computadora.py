@@ -22,8 +22,15 @@ class Computadora:
 
 
 if __name__ == '__main__':
-    teclado1 = Teclado('USB','Hp')
-    raton1 = Raton('Wireless','Razer')
-    monitor1 = Monitor('HDMI','Loginius','50"')
-    computadora1 = Computadora('Caso 1',monitor1,teclado1,raton1)
-    print(computadora1)
+    pass
+    # teclado1 = Teclado('USB','Hp')
+    # raton1 = Raton('Wireless','Hp')
+    # monitor1 = Monitor('HDMI','Hp','50"')
+    # computadora1 = Computadora('HP',monitor1,teclado1,raton1)
+    # print(computadora1)
+    
+    # teclado2 = Teclado('Wireless','Razer')
+    # raton2 = Raton('Wireless/C','Razer')
+    # monitor2 = Monitor('HDMI','Razer','32"')
+    # computadora2 = Computadora('Razer',monitor2,teclado2,raton2)
+    # print(computadora2)
