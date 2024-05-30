@@ -1,3 +1,4 @@
+# Clase 148 - Clase Orden
 from Raton import *
 from Teclado import *
 from Monitor import *
@@ -18,5 +19,4 @@ computadora2 = Computadora('Razer',monitor2,teclado2,raton2)
 
 computadoras1 = [computadora1, computadora2]
 orden1 = Orden(computadoras1)
-orden1.agregar_computadora(computadoras1)
 print(orden1)
