@@ -60,11 +60,13 @@ class Biblioteca:
             if u._id_usuario == id_usuario:
                 usuario = u
                 break
-        
-        for l in self._libros:
-            if l._id_libro == id_libro:
-                libro = l
-                break
+
+        if usuario is not None:
+            # Buscar el libro en los libros prestados del usuario
+            for l in usuario._libros_prestados:
+                if l._id_libro == id_libro:
+                    libro = l
+                    break
         
         # Comparamos ambas busquedas
         if usuario is not None and libro is not None:
@@ -82,3 +84,5 @@ class Biblioteca:
         usuario_str = ''
         for usuario in self._usuarios:
             usuario_str += usuario.__str__() + '\n'
+        
+        return f'Biblioteca: {self._nombre}\nLibros:{libro_str}\nUsuarios: {usuario_str}'

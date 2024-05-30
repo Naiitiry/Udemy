@@ -21,22 +21,8 @@ class Libro:
         self._titulo = titulo
         self._autor = autor
         self._anio = anio
-        self._disponible = True
-    
-    # Aplicamos Setter y Get a la Clase Disponible
-    # GET
-    @property
-    def disponible(self):
-        return self._disponible
-    
-    # SETTER
-    @disponible.setter
-    def disponible(self,disponible):
-        self._disponible = disponible
+        self.disponible = True
 
     def __str__(self):
-        return f'ID: {self._id_libro}, Libro: {self._titulo}, Autor: {self._autor}, Año de publicación: {self._anio}, Disponibilidad: {self.disponible}'
-
-if __name__ == "__main__":
-    libro1 = Libro('Los arboles mueren de pie',"Nico Vazquez",1997)
-    print(libro1)
+        estado = 'Disponible' if self.disponible else 'Prestado'
+        return f'ID: {self._id_libro}, Libro: {self._titulo}, Autor: {self._autor}, Año de publicación: {self._anio}, Disponibilidad: {estado}'

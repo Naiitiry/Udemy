@@ -15,12 +15,16 @@ __str__(self): representa el usuario como una cadena de texto.
 
 class Usuario:
     contador_usuarios = 0
-    def __init__(self,nombre,libros_prestados):
+    def __init__(self,nombre):
         Usuario.contador_usuarios += 1
         self._id_usuario = Usuario.contador_usuarios
         self._nombre = nombre
         self._libros_prestados = []
     
+    @property
+    def nombre(self):
+        return self._nombre
+
     def prestar_libro(self,libro):
         self._libros_prestados.append(libro)
 
@@ -29,6 +33,4 @@ class Usuario:
 
     def __str__(self):
         libros_prestados_str=', '.join([libro._titulo for libro in self._libros_prestados])
-        return f'ID Usuario: {self._id_usuario}, Nombre: {self._nombre}, Libros prestados: {libros_prestados_str}'
-if __name__ == "__main":
-    usuari1 = Usuario('Nicolas')
+        return f'Nombre: {self._nombre}, Libros prestados: {libros_prestados_str}'
