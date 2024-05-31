@@ -3,7 +3,7 @@ from Raton import *
 from Monitor import *
 
 class Computadora:
-    contador_computadora = 1000
+    contador_computadora = 0
     def __init__(self,nombre,monitor,teclado,raton):
         Computadora.contador_computadora += 1
         self._id_computadora = Computadora.contador_computadora
@@ -14,15 +14,14 @@ class Computadora:
 
     def __str__(self):
         return f'''
-        {self._nombre}: ID {self._id_computadora}
+        {self._nombre}: {self._id_computadora}
         Monitor: {self._monitor}
         Teclado: {self._teclado}
         Ratón: {self._raton}
         '''
 
 
-if __name__ == '__main__':
-    pass
+
     # teclado1 = Teclado('USB','Hp')
     # raton1 = Raton('Wireless','Hp')
     # monitor1 = Monitor('HDMI','Hp','50"')

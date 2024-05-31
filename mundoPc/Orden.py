@@ -1,5 +1,3 @@
-from Computadora import *
-
 class Orden:
     contador_orden = 0
     def __init__(self,computadoras):
@@ -16,5 +14,7 @@ class Orden:
             computadoras_str += computadora.__str__()
         return f'''
         Orden: {self._id_orden}
-        Computadoras: {self._computadoras}
+        Computadoras: {computadoras_str}
         '''
+# En el __str__, en Computadoras tenía puesto  {self._computadoras} y por eso me daba
+# la orden1 con la dirección en memoria, una vez cambiado, el test estuvo correcto.
