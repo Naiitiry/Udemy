@@ -1,8 +1,7 @@
 import os
 
-
 class CatalogoPeliculas:
-    ruta_archivo = 'C:/Users/rdanchuk/Desktop/Python/Udemy/catalogo_peliculas/peliculas.txt'
+    ruta_archivo = '../peliculas.txt'
 
     @classmethod
     def agregar_pelicula(cls,pelicula):
@@ -19,5 +18,3 @@ class CatalogoPeliculas:
     def eliminar_peliculas(cls):
         os.remove(cls.ruta_archivo)
         print(f'Archivo eliminado {cls.ruta_archivo}')
-
-
