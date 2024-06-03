@@ -3,6 +3,7 @@ import os
 class Biblioteca2:
 
     # Disponemos del archivo .txt con una ruta de acceso
+    # con el módulo os
 
     ruta_libros = os.path.join(os.path.dirname(__file__),'data','libros.txt')
 
