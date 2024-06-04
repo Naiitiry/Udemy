@@ -1,0 +1,17 @@
+Ejercicio: Gestión de una Agenda de Contactos
+
+Vas a crear una aplicación en Python para gestionar una agenda de contactos. 
+La aplicación deberá permitir al usuario:
+
+Agregar un contacto: Ingresar el nombre, número de teléfono y 
+correo electrónico de un contacto y guardarlo en un archivo contactos.txt.
+
+Listar los contactos: Leer y mostrar todos los contactos almacenados en contactos.txt.
+
+Eliminar un contacto: Eliminar un contacto específico del archivo por nombre.
+
+Buscar un contacto: Buscar y mostrar un contacto específico por nombre.
+
+Cerrar la aplicación: Salir del programa.
+
+se agregan "Editar contacto" y "Eliminar Archivo

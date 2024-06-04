@@ -22,10 +22,15 @@ while opcion != 4:
         bi.agregar_libro(varios)
         print('Libro agregado exitosamente!')
     elif opcion == 2:
-        bi.listar_libros()
+        try:
+            bi.listar_libros()
+        except Exception as e:
+            print(f'Lista aún no creada, error: {e}')
     elif opcion == 3:
-        print('Se eliminará el archivo de peliculas.')
-        bi.eliminar_libros()
+        try:
+            bi.eliminar_libros()
+        except Exception as e:
+            print(f'Lista aún no creada, error: {e}')
     else:
         print(' Que tengas buen día '.center(50,'*'))
         break

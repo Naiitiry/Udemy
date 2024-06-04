@@ -29,9 +29,7 @@ class Biblioteca2:
     def listar_libros(cls):
         cls.verificar_directorio()
         with open(cls.ruta_libros,'r',encoding='utf8') as archivo:
-            print('\n-'.center(50,'-'))
             print('Libros'.center(50,'-'))
-            print('-'.center(50,'-')+'\n')
             print(archivo.read())
     
 
