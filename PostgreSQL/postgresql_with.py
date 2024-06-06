@@ -7,15 +7,14 @@ conexion = psycopg2.connect(user='postgres',password='admin',host='127.0.0.1',po
 
 # Abrimos la BBDD para ver todo lo que hay en ella
 
-with conexion: 
-    try:
-        with conexion.cursor() as cursor:
-            sentencia = 'SELECT * FROM persona'
-            cursor.execute(sentencia)
-            registro = cursor.fetchall()
-            print(registro)
-    except Exception as e:
-        print(e)
-    finally:
-        # Cerramos la conexión a la BBDD
-        conexion.close()
+try:
+    with conexion.cursor() as cursor:
+        sentencia = 'SELECT * FROM persona'
+        cursor.execute(sentencia)
+        registro = cursor.fetchall()
+        print(registro)
+except Exception as e:
+    print(e)
+finally:
+    # Cerramos la conexión a la BBDD
+    conexion.close()
