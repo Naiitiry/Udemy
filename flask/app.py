@@ -1,14 +1,33 @@
-from flask import Flask, request,render_template,url_for
+from flask import Flask, request,render_template,url_for,session
 from werkzeug.utils import redirect
 from werkzeug.exceptions import abort
 
 app = Flask(__name__)
 
+# Clase 536 - Sesiones
+app.secret_key='Mi-llave_secreta!'
+
 # http://localhost:5000/
 @app.route("/")
 def inicio():
-    app.logger.info('Entramos al path: {}')
-    return "<h1>Hola Mundo desde Flask!</h1>"
+    if 'username' in session:
+        return f'<h2>El usuario {session["username"]} a hecho loggin</h2>'
+    return "<h2>No ha hecho loggin!</h2>"
+
+@app.route('/login',methods=['GET','POST'])
+def loggin():
+    if request.method == 'POST':
+        # Omitimos la validación de usuario y password
+        usuario = request.form['username']
+        # Agregar usuario a la sesion
+        session['username'] = usuario
+        return redirect(url_for('inicio'))
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('username')
+    return redirect(url_for('inicio'))
 
 @app.route("/saludar/<nombre>")
 def saludo(nombre):
