@@ -1,0 +1,22 @@
+Para crear el entorno virtual puedo hacerlo de manera manual con: 
+
+    pythonpython -m venv nombre_del_entorno
+
+Si manejo powershell, para iniciar el entorno utilizo:
+
+    .\nombre_del_entorno\Scripts\Activate
+
+para verificar que dependencias tengo:
+
+    pip list
+
+En caso de que no pueda trabajar porque al importar haya algún inconveniente, debo hacer lo siguiente:
+
+    Abre el comando de paleta en VSCode (Ctrl + Shift + P).
+
+    Busca y selecciona Python: Select Interpreter.
+
+    Selecciona el intérprete de tu entorno virtual 
+    (debería estar en algo como .\nombre_del_entorno\Scripts\python.exe).
+
+Si tengo varios trabajos con VM, tengo que indicarle bien que entorno quiero trabajar.
