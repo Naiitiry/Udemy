@@ -3,14 +3,20 @@ Vas a crear una aplicación en Python para gestionar el inventario de una tienda
 
 La aplicación deberá permitir al usuario:
 
-Agregar un producto: Ingresar el nombre, categoría, cantidad y precio de un producto y guardarlo en un archivo inventario.txt.
-Listar todos los productos: Leer y mostrar todos los productos almacenados en inventario.txt.
+Agregar un producto: Ingresar el nombre, categoría, cantidad y precio de un producto y 
+guardarlo en un archivo inventario.csv.
+
+Listar todos los productos: Leer y mostrar todos los productos almacenados en inventario.csv.
+
 Eliminar un producto: Eliminar un producto específico del archivo por nombre.
+
 Buscar un producto: Buscar y mostrar un producto específico por nombre.
+
 Modificar un producto: Modificar la cantidad y/o precio de un producto específico por nombre.
+
 Cerrar la aplicación: Salir del programa.
 
-Pasos detallados
+#             # Pasos detallados #             #
 
 Clase Producto:
 
@@ -19,7 +25,7 @@ Método __str__: Para representar el producto como una cadena.
 
 Clase Inventario:
 
-Método agregar_producto(producto): Añadir un producto al archivo inventario.txt.
+Método agregar_producto(producto): Añadir un producto al archivo inventario.csv.
 Método listar_productos(): Leer y mostrar todos los productos del archivo.
 Método eliminar_producto(nombre): Eliminar un producto específico del archivo.
 Método buscar_producto(nombre): Buscar y mostrar un producto específico por nombre.
