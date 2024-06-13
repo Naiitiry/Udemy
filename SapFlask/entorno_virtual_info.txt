@@ -20,3 +20,11 @@ En caso de que no pueda trabajar porque al importar haya algún inconveniente, d
     (debería estar en algo como .\nombre_del_entorno\Scripts\python.exe).
 
 Si tengo varios trabajos con VM, tengo que indicarle bien que entorno quiero trabajar.
+
+********************* DEPENDENCIAS *********************
+
+
+Flas-SQLAlchemy: pip install -U Flask-SQLAlchemy
+
+Flask-Migrate: pip install Flask-Migrate
+

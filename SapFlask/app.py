@@ -63,5 +63,19 @@ def inicio():
     app.logger.debug(f'Total Personas: {total_personas}')
     return render_template('index.html',personas=personas,total_personas=total_personas)
 
+# Buscamos a la persona por ID
+@app.route('/ver/<int:id>')
+
+# Definimos el método:
+def ver_detalle(id):
+    #Recuperamos la persona según el ID proporcionado.
+    #persona = Persona.query.get(id)
+    persona = Persona.query.get_or_404(id)
+    # Se pone get_or_404 porque si no hay nada en esa ID
+    # da el error 404, es para el manejo de errores.
+    app.logger.debug(f'Listado persona: {persona}')
+    return render_template('detalle.html',persona=persona)
+
+
 # en las versiones de 3.X se utiliza --debug al final
 # flask run --debug.
