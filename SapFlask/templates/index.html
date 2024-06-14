@@ -3,36 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/estilo.css')}}">
     <title>Listado de Personas</title>
 </head>
 <body>
-    <h1>Sistema de Administración de Personas (SAP)</h1>
-    <div>
-        Total de personas: {{total_personas}}
-    </div>
-    <div>
-        <table border="1" bordercolor="#00CC66" cellpadding="5">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Email</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for persona in personas %}
-                    <tr>
-                        <td>{{persona.id}}</td>
-                        <td>{{persona.nombre}}</td>
-                        <td>{{persona.apellido}}</td>
-                        <td>{{persona.email}}</td>
-                        <td><a href="ver/{{persona.id}}">VER</a></td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <header>
+        <h1 class="titulo">Sistema de Administración de Personas (SAP)</h1>
+        <h3 class="titulo_contador">Total de personas: {{total_personas}}</h3>
+    </header>
+    <div class="content">
+        <div class="cuerpo_formulario">
+            <div class="formulario">
+                <table border="1" bordercolor="#00CC66" cellpadding="5">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Email</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for persona in personas %}
+                            <tr>
+                                <td>{{persona.id}}</td>
+                                <td>{{persona.nombre}}</td>
+                                <td>{{persona.apellido}}</td>
+                                <td>{{persona.email}}</td>
+                                <td><a href="ver/{{persona.id}}">VER</a></td>
+                                <td><a href="editar/{{persona.id}}">EDITAR</a></td>
+                                <td><a href="eliminar/{{persona.id}}">ELIMINAR</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="agregar">
+                <a href="/agregar">Agregar persona</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
