@@ -1,0 +1,25 @@
+Crea una aplicación para gestionar tareas (to-do list). 
+La aplicación debe permitir a los usuarios realizar las siguientes acciones:
+
+- Crear una nueva tarea:
+
+Cada tarea debe tener un título, una descripción y una fecha límite.
+Utiliza formularios de Flask-WTF para crear y validar los formularios.
+
+- Listar todas las tareas:
+
+Muestra una lista de todas las tareas en la base de datos.
+Las tareas deben mostrarse ordenadas por fecha de creación o por fecha límite.
+
+- Actualizar una tarea existente:
+
+Permite a los usuarios editar el título, la descripción y la fecha límite de una tarea.
+
+- Eliminar una tarea:
+
+Permite a los usuarios eliminar una tarea.
+
+----- Requisitos adicionales:
+
+Utiliza SQLAlchemy y Flask-Migrate para manejar la base de datos.
+Crea plantillas con Jinja2 para mostrar los formularios y las listas de tareas.
