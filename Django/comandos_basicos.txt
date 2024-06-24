@@ -1,0 +1,13 @@
+1- Arrancar APP:
+        python manage.py runserver
+
+2 - Super usuario para /admin:
+        python manage.py createsuperuser
+        - Luego pide usuario, email y contraseña.
+
+3 - Para migrar debemos utilizar:
+        python manage.py makemigrations --> sirve una vez que estén realizadas las migraciones
+
+        Luego debo migrar el archivo de migración, ya que no es inmediato, queda reservado en un archivo
+
+        python manage.py migrate
